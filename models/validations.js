@@ -2,9 +2,12 @@
 const validate = require("validate.js");
 
 module.exports = {
-  show: (data) => {
+  game: (data) => {
     const constraints = {
-      title: {
+      name: {
+        presence: true
+      },
+      sport: {
         presence: true
       }
     };

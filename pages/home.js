@@ -2,47 +2,47 @@
 
 const html = require("choo/html"),
   navBar = require("../elements/navbar"),
-  addShow = require("../elements/add-show"),
-  showList = require("../elements/show-list");
+  addGame = require("../elements/add-game"),
+  gameList = require("../elements/game-list");
 
-function _getAddShowParams(state, emit) {
+function _getAddGameParams(state, emit) {
   return {
-    show: state.show,
-    addShow: (data) => {
-      emit("shows:add", data);
-      emit("show:reset");
+    game: state.game,
+    addGame: (data) => {
+      emit("games:add", data);
+      emit("game:reset");
     },
-    updateShow: (data) => {
-      emit("show:update", data);
+    updateGame: (data) => {
+      emit("game:update", data);
     }
   };
 }
 
-function _getShowListParams(state, emit) {
+function _getGameListParams(state, emit) {
   return {
-    shows: state.shows,
-    changeShow: (data) => {
-      emit("shows:modify", data);
+    games: state.games,
+    changeGame: (data) => {
+      emit("games:modify", data);
     },
-    loadShows: () => {
-      emit("shows:load");
+    loadGames: () => {
+      emit("games:load");
     },
-    removeShow: (show) => {
-      emit("shows:remove", show);
+    removeGame: (game) => {
+      emit("games:remove", game);
     }
   };
 }
 
 module.exports = {
-  getAddShowParams: _getAddShowParams,
-  getShowListParams: _getShowListParams,
+  getAddGameParams: _getAddGameParams,
+  getGameListParams: _getGameListParams,
   render(state, emit) {
     return html`
       <main>
       ${navBar()}
       <div class="container">
-      ${addShow(_getAddShowParams(state, emit))}
-      ${showList(_getShowListParams(state, emit))}
+      ${addGame(_getAddGameParams(state, emit))}
+      ${gameList(_getGameListParams(state, emit))}
       </div>
       </main>`;
   }

@@ -1,7 +1,7 @@
 {
-  "name": "tv-series",
-  "version": "0.0.0",
-  "description": "Created with choo-cli",
+  "name": "sports-tv",
+  "version": "1.0.0",
+  "description": "Track what matches have been watched",
   "license": "MIT",
   "scripts": {
     "start": "bankai client.js -p 8080 --open",
@@ -9,7 +9,7 @@
     "lint": "eslint *.js **/*.js tests/**/*.js",
     "test": "tape tests/**/*.js | tap-diff",
     "test-w": "tape-watch tests/**/*.js | tap-diff",
-    "serve": "serve --port 3000"
+    "serve": "serve --port 4000"
   },
   "dependencies": {
     "choo": "^5.0.4",
