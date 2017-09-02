@@ -27,9 +27,9 @@ function gameList(options) {
       </tr>
     </thead>
     <tbody>
-    ${options.games.map((s)=> {
+    ${options.games.map((g)=> {
       return game({
-        show: s,
+        game: g,
         removeGame: options.removeGame,
         changeGame: options.changeGame
       });

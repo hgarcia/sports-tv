@@ -37,7 +37,8 @@ function addGame (options) {
         <div class="form-group col-xs-4">
             <label for="sport" class="col-xs-5">Sport</label>
             <div class="col-xs-7">
-              <input type="number" oninput=${onInput("sport", options)} step="1" min="0" class="form-control form-control-sm" name="sport" id="sport" value="${options.game.sport}">
+              <input type="test" oninput=${onInput("sport", options)} step="1" min="0" class="form-control form-control-sm" name="sport" id="sport" value="${options.game.sport}">
+              <span class="error ${options.game.errors && options.game.errors.sport ? "" : "hidden"}">${options.game.errors && options.game.errors.sport ? options.game.errors.name : ""}</span>
             </div>
           </div>
           <div class="form-group col-xs-4">
