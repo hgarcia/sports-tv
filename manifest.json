@@ -1,0 +1,9 @@
+{
+  "name": "Tv-series",
+  "short_name": "Tv-series",
+  "theme_color": "#5264b4",
+  "background_color": "#5264b4",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "/"
+}

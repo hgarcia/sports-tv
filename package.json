@@ -1,0 +1,28 @@
+{
+  "name": "tv-series",
+  "version": "0.0.0",
+  "description": "Created with choo-cli",
+  "license": "MIT",
+  "scripts": {
+    "start": "bankai client.js -p 8080 --open",
+    "build:prod": "bankai build client.js dist/",
+    "lint": "eslint *.js **/*.js tests/**/*.js",
+    "test": "tape tests/**/*.js | tap-diff",
+    "test-w": "tape-watch tests/**/*.js | tap-diff",
+    "serve": "serve --port 3000"
+  },
+  "dependencies": {
+    "choo": "^5.0.4",
+    "firebase": "^4.1.1",
+    "serve": "^2.4.3",
+    "uuid": "^3.0.1",
+    "validate.js": "^0.11.1"
+  },
+  "devDependencies": {
+    "bankai": "^6.0.0",
+    "eslint": "^3.11.1",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.6.3",
+    "tape-watch": "^2.2.4"
+  }
+}
