@@ -22,9 +22,9 @@ module.exports = {
   render(state, emit) {
     return html`
       <main>
-      ${title("Login")}
-      ${navBar("login")}
-      <div class="container">
+      ${title("Account")}
+      ${navBar("account")}
+      <div class="content">
       ${login(_getLoginParams(state, emit))}
       </div>
       </main>`;

@@ -10,7 +10,7 @@ module.exports = {
       <main>
       ${title("Settings")}
       ${navBar("settings")}
-      <div class="container">
+      <div class="content">
       In the settings page.
       </div>
       </main>`;

@@ -42,7 +42,7 @@ module.exports = {
       <main>
       ${title("Sports TV")}
       ${navBar("home")}
-      <div class="container">
+      <div class="content">
       ${addGame(_getAddGameParams(state, emit))}
       ${gameList(_getGameListParams(state, emit))}
       </div>

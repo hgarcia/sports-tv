@@ -17,9 +17,9 @@ function navbar (active) {
     <span class="icon icon-gear"></span>
     <span class="tab-label">Settings</span>
   </a>
-  <a class="tab-item ${activeTab("login", active)}" href="/Login">
+  <a class="tab-item ${activeTab("account", active)}" href="/account">
     <span class="icon icon-person"></span>
-    <span class="tab-label">Login</span>
+    <span class="tab-label">Account</span>
   </a>
 </nav>`;
 }

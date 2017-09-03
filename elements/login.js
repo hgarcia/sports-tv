@@ -24,11 +24,22 @@ function onSubmit(options) {
 }
 
 function login(options) {
-  return html`<form>
-  <input type="email" placeholder="Email" oninput=${onInput("email", options)}>
-  <input type="password" placeholder="Password" oninput=${onInput("password", options)}>
-  <button type="submit" onclick=${onSubmit(options)} class="btn btn-positive btn-block">Login</button>
-</form>`;
+  return html`
+  <div>
+  <form>
+    <div>
+      <label>Email</label>
+      <input type="email" oninput=${onInput("email", options)}/>>
+    </div>
+    <div>
+      <label>Password</label>
+      <input type="password" oninput=${onInput("password", options)} />>
+    </div>
+    <div>
+      <button type="submit" onclick=${onSubmit(options)} class="btn btn-positive btn-block">Login</button>
+    </div>
+  </form>
+</div>`;
 }
 
 module.exports = login;
