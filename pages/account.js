@@ -9,7 +9,7 @@ function _getLoginParams(state, emit) {
   return {
     user: state.user,
     login: (data) => {
-      emit("user:login", data);
+      emit("user:signin", data);
       emit("user:reset");
     },
     updateUser: (data) => {

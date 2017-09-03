@@ -29,11 +29,11 @@ function login(options) {
   <form>
     <div>
       <label>Email</label>
-      <input type="email" oninput=${onInput("email", options)}/>>
+      <input type="email" oninput=${onInput("email", options)} value="${options.user.email}"/>>
     </div>
     <div>
       <label>Password</label>
-      <input type="password" oninput=${onInput("password", options)} />>
+      <input type="password" oninput=${onInput("password", options)} value="${options.user.password}"/>>
     </div>
     <div>
       <button type="submit" onclick=${onSubmit(options)} class="btn btn-positive btn-block">Login</button>

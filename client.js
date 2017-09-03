@@ -8,10 +8,11 @@ const choo = require("choo"),
   fb = require("./lib/firebase-db").init(),
   db = fb.db(),
   auth = fb.auth(),
+  session = require("./lib/session").create(auth),
   storage = require("./lib/storage").create(db);
 
 app.use(require("./models/games").create(storage));
-app.use(require("./models/user").create(auth));
+app.use(require("./models/user").create(session));
 app.route("/", home.render);
 app.route("/settings", settings.render);
 app.route("/account", account.render);
