@@ -12,5 +12,16 @@ module.exports = {
       }
     };
     return validate(data, constraints);
+  },
+  user: (data) => {
+    const constraints = {
+      email: {
+        presence: true
+      },
+      password: {
+        presence: true
+      }
+    };
+    return validate(data, constraints);
   }
 };
