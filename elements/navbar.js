@@ -3,21 +3,24 @@
 "use strict";
 const html = require("bel");
 
-function navbar () {
-  return html`<nav class="navbar navbar-light bg-faded">
-  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
-  <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-    <a class="navbar-brand" href="#">Sports Tv</a>
-    <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-    <!-- <form class="form-inline float-lg-right">
-      <input class="form-control" type="text" placeholder="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form> -->
-  </div>
+function activeTab(tabName, active) {
+  return tabName === active ? "active" : "";
+}
+
+function navbar (active) {
+  return html`<nav class="bar bar-tab">
+  <a class="tab-item ${activeTab("home", active)}" href="/">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">Home</span>
+  </a>
+  <a class="tab-item ${activeTab("settings", active)}" href="/settings">
+    <span class="icon icon-gear"></span>
+    <span class="tab-label">Settings</span>
+  </a>
+  <a class="tab-item ${activeTab("login", active)}" href="/Login">
+    <span class="icon icon-person"></span>
+    <span class="tab-label">Login</span>
+  </a>
 </nav>`;
 }
 

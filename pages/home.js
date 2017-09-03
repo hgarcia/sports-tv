@@ -2,6 +2,7 @@
 
 const html = require("choo/html"),
   navBar = require("../elements/navbar"),
+  title = require("../elements/title"),
   addGame = require("../elements/add-game"),
   gameList = require("../elements/game-list");
 
@@ -39,7 +40,8 @@ module.exports = {
   render(state, emit) {
     return html`
       <main>
-      ${navBar()}
+      ${title("Sports TV")}
+      ${navBar("home")}
       <div class="container">
       ${addGame(_getAddGameParams(state, emit))}
       ${gameList(_getGameListParams(state, emit))}
